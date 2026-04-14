@@ -1,0 +1,84 @@
+# ================================
+# Scoreboard Configuration
+# ================================
+
+# Update interval in ticks (20 ticks = 1 second)
+# All scoreboard lines update at this interval
+update-interval: 20
+
+# Coordinate refresh interval in seconds
+# Coordinates update less frequently to reduce packet spam
+coordinate-refresh-interval: 5
+
+# ================================
+# Animated Title Configuration
+# ================================
+title-animation:
+  # Number of ticks between frame changes
+  frame-interval: 10
+
+  # List of title frames (supports color codes with &)
+  frames:
+    - "&6&lMY SERVER"
+    - "&e&lMY SERVER"
+    - "&6&lMY SERVER"
+    - "&e&lMY SERVER"
+
+# ================================
+# Scoreboard Lines Configuration
+# ================================
+# Each line has:
+# - enabled: true/false (whether to display this line)
+# - template: the text format (use {placeholder} for dynamic values)
+#
+# Available placeholders:
+# {online} - online player count
+# {hearts} - health as heart symbols
+# {food} - food level
+# {kills} - player kills
+# {deaths} - player deaths
+# {kd} - kill/death ratio
+# {world} - world display name
+# {x}, {y}, {z} - coordinates
+
+lines:
+  online:
+    enabled: true
+    template: "&7Online: &a{online}"
+
+  health:
+    enabled: true
+    template: "&7Health: {hearts}"
+
+  food:
+    enabled: true
+    template: "&7Food: &6{food}"
+
+  kills:
+    enabled: true
+    template: "&7Kills: &e{kills}"
+
+  deaths:
+    enabled: true
+    template: "&7Deaths: &c{deaths}"
+
+  kd:
+    enabled: true
+    template: "&7K/D: &b{kd}"
+
+  world:
+    enabled: true
+    template: "&7World: &d{world}"
+
+  coordinates:
+    enabled: true
+    template: "&7Location: &f{x}, {y}, {z}"
+
+# ================================
+# World Name Aliases
+# ================================
+# Map internal world names to display names
+world-aliases:
+  world: "Overworld"
+  world_nether: "Nether"
+  world_the_end: "The End"

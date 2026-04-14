@@ -1,0 +1,24 @@
+name: Trial
+version: '${version}'
+
+main: frqme.isa.dev.trial.Trial
+api-version: '1.21.11'
+load: POSTWORLD
+author: frqme
+description: per-player scoreboard plugin
+
+commands:
+  scoreboard:
+    description: Toggle your scoreboard on/off
+    usage: /scoreboard toggle
+    aliases: [sb-toggle]
+
+  sb:
+    description: Reload scoreboard configuration
+    usage: /sb reload
+    permission: sb.reload
+
+permissions:
+  sb.reload:
+    description: Allows reloading the scoreboard configuration
+    default: op
